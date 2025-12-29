@@ -51,15 +51,22 @@ plot_df = tibble(
 
 First we show a histogram of the `x` variable
 
-```{r}
+```{r x_hist}
 ggplot(plot_df, aes(x = x)) + geom_histogram()     
 # first thing is what data set, second is what I put in x-axis, and than going to say what kind of polt I want to draw
 ```
 
-Next we show a scatterplot of `y` vs `x`
+Next, we show a scatterplot of `y` vs `x`
 
-```{r}
+```{r yx_scatter}
 ggplot(plot_df, aes(x = x, y = y_quad)) + geom_point()
+```
+
+Lastly, we show a histogram of the `y` variable.
+
+```{r y_hist}
+ggplot(plot_df, aes(x = y)) + geom_histogram()     
+
 ```
 
 ```{r}
