@@ -14,13 +14,13 @@ y = c(1,3,17,25)
 mean(x)
 ```
 
-    ## [1] 0.4219181
+    ## [1] 0.5221123
 
 ``` r
 var(x)
 ```
 
-    ## [1] 0.08396071
+    ## [1] 0.09250944
 
 ## data frames
 
@@ -56,21 +56,29 @@ plot_df = tibble(
   y = 1 + 2 * x + rnorm(1000),      # add noise
   y_quad = 1 + 2 * x - 3 * x ^ 2 +rnorm(1000)
   )
+```
 
+First we show a histogram of the `x` variable
+
+``` r
 ggplot(plot_df, aes(x = x)) + geom_histogram()     
 ```
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](Building-blocks-1-2-3_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](Building-blocks-1-2-3_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
 # first thing is what data set, second is what I put in x-axis, and than going to say what kind of polt I want to draw
+```
 
+Next we show a scatterplot of `y` vs `x`
+
+``` r
 ggplot(plot_df, aes(x = x, y = y_quad)) + geom_point()
 ```
 
-![](Building-blocks-1-2-3_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->
+![](Building-blocks-1-2-3_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 plot_df = tibble(
@@ -84,13 +92,13 @@ ggplot(plot_df, aes(x = x)) + geom_histogram()
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](Building-blocks-1-2-3_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](Building-blocks-1-2-3_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ``` r
 ggplot(plot_df, aes(x = x, y = y_quad)) + geom_point()
 ```
 
-![](Building-blocks-1-2-3_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+![](Building-blocks-1-2-3_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
 
 # Writing with data
 
@@ -111,8 +119,8 @@ length(samp)
 
 ## Section 2
 
-I can take the mean of the sample, too! The mean is -0.0660508. (Inline
-R code)
+I can take the mean of the sample, too! The mean is 0.2456589. (Inline R
+code)
 
 ### Code chunk options
 
